@@ -22,10 +22,10 @@ app.route('/api/courses/:id').put(saveCourse);
 
 app.route('/api/login').post(loginUser);
 
-const PORT = httpServer.address()["port"];
+const port = process.env.PORT || 8080;
 
-const httpServer = app.listen(httpServer.address()["port"], () => {
-    console.log("HTTP REST API Server running at http://localhost:" + httpServer.address()["port"]);
+const httpServer = app.listen(port, () => {
+    console.log("HTTP REST API Server running at http://localhost:" + port);
 });
 
 
