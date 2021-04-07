@@ -22,8 +22,6 @@ app.route('/api/courses/:id').put(saveCourse);
 
 app.route('/api/login').post(loginUser);
 
-const httpServer = app.listen(httpServer.address()["port"], () => {
+const httpServer = app.listen(() => {
     console.log(httpServer.address()["port"]);
 });
-
-
