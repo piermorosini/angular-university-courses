@@ -24,7 +24,8 @@ app.route('/api/login').post(loginUser);
 
 const PORT = httpServer.address()["port"];
 
-const httpServer = app.listen(PORT, () => {
-    console.log("HTTP REST API Server running at http://localhost:" + PORT);
+const httpServer = app.listen(httpServer.address()["port"], () => {
+    console.log("HTTP REST API Server running at http://localhost:" + httpServer.address()["port"]);
 });
+
 
