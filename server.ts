@@ -22,6 +22,7 @@ app.route('/api/courses/:id').put(saveCourse);
 
 app.route('/api/login').post(loginUser);
 
-const httpServer = app.listen(() => {
-    console.log(httpServer.address()["port"]);
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Our app is running on port ${ PORT }`);
 });
