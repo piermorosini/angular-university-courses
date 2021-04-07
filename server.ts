@@ -23,9 +23,10 @@ app.route('/api/courses/:id').put(saveCourse);
 app.route('/api/login').post(loginUser);
 
 const port = process.env.PORT || 8080;
+console.log("port : " + port);
 
-const httpServer = app.listen(port, () => {
-    console.log("HTTP REST API Server running at http://localhost:" + port);
+const httpServer = app.listen(() => {
+    console.log("https://angular-university-courses.herokuapp.com:" + port);
 });
 
 
